@@ -1,4 +1,4 @@
--- Base de datos: Caso de Estudio #2
+-- Base de datos Caso de Estudio #2
 CREATE DATABASE IF NOT EXISTS caso2;
 USE caso2;
 
@@ -6,7 +6,7 @@ CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     correo VARCHAR(100) NOT NULL UNIQUE,
-    contrasena VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     rol ENUM('usuario','admin') NOT NULL DEFAULT 'usuario'
 );
 
@@ -27,9 +27,9 @@ CREATE TABLE solicitudes (
 );
 
 -- Usuarios de prueba (password para ambos: 1234)
-INSERT INTO usuarios (nombre, correo, contrasena, rol) VALUES
-('Administrador', 'admin@correo.com','admin','admin'),
-('Usuario Demo', 'user@correo.com', 'pass', 'usuario');
+INSERT INTO usuarios (nombre, correo, password, rol) VALUES
+('Administrador', 'admin@correo.com', '$2b$10$iC2.v3zX4QFx090mTuiRUOImHtHNE/6SXdKYSpJpCrB9HsX36l4r2', 'admin'),
+('Usuario Demo', 'user@correo.com', '$2b$10$iC2.v3zX4QFx090mTuiRUOImHtHNE/6SXdKYSpJpCrB9HsX36l4r2', 'usuario');
 
 INSERT INTO talleres (nombre, cupo) VALUES
 ('Angular', 3),

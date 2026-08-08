@@ -1,0 +1,41 @@
+body {
+    background-color: #f4f6f8;
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+}
+
+.card-form {
+    background: white;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+header h1 {
+    color: white;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+table th {
+    background: #333;
+    color: white;
+}
